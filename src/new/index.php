@@ -33,6 +33,7 @@ if (!isset($stt)) {
       $stt = "Random";
 }
 
+setcookie("userGame", $jfoo, time() + (86400 * 30), "/");
 $gm = new Game($stt);
 $foo = array("response" => $gm->getResponse(), "pid" => $gm->getPid());
 $jfoo = json_encode($foo);
